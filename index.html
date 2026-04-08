@@ -21,91 +21,78 @@ body {
     color: white;
     transition: background 0.5s, color 0.5s;
 }
-
 .light-mode {
     background: linear-gradient(135deg, #f0f0f5, #d1e7ff);
     color: #0f172a;
 }
-
-h1, h2, h3 { margin: 0; }
-a { text-decoration: none; transition: 0.3s; }
-a:hover { color: #38bdf8; }
+h1,h2,h3 { margin:0; }
+a { text-decoration:none; transition:0.3s; }
+a:hover { color:#38bdf8; }
 
 /* NAVBAR */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: rgba(0,0,0,0.6);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    display:flex; justify-content:space-between; padding:15px 40px;
+    background: rgba(0,0,0,0.6); position: sticky; top:0; z-index:100;
 }
-
 nav.light-mode { background: rgba(255,255,255,0.9); }
 nav h2 { color: #38bdf8; }
-nav.light-mode h2 { color: #0f172a; }
-nav ul { display: flex; list-style: none; margin: 0; }
-nav ul li { margin-left: 25px; }
-nav a { color: white; }
-nav.light-mode a { color: #0f172a; }
-nav a:hover { color: #38bdf8; }
+nav.light-mode h2 { color:#0f172a; }
+nav ul { display:flex; list-style:none; margin:0; }
+nav ul li { margin-left:25px; }
+nav a { color:white; }
+nav.light-mode a { color:#0f172a; }
 
 /* HERO */
-.hero { text-align: center; padding: 80px 20px; }
-.hero h1 { font-size: 3rem; }
-.hero span { color: #38bdf8; }
-.hero p { color: #cbd5f5; font-weight: 500; margin-top: 10px; }
-.btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #38bdf8; color: black; border-radius: 8px; font-weight: bold; cursor: pointer; }
+.hero { text-align:center; padding:80px 20px; }
+.hero h1 { font-size:3rem; }
+.hero span { color:#38bdf8; }
+.hero p { color:#cbd5f5; font-weight:500; margin-top:10px; min-height:50px; }
+.btn { display:inline-block; margin-top:20px; padding:12px 25px; background:#38bdf8; color:black; border-radius:8px; font-weight:bold; cursor:pointer; }
 
 /* SECTION */
-section { padding: 60px 20px; }
-#about p { max-width: 800px; margin: 15px auto; line-height: 1.8; color: #e0e7ff; }
-.light-mode #about p { color: #0f172a; }
+section { padding:60px 20px; }
+#about { text-align:center; max-width:900px; margin:auto; }
+#about img { width:180px; border-radius:50%; margin-bottom:20px; border:4px solid #38bdf8; }
+#about p { font-size:1.05rem; line-height:1.8; color:#e0e7ff; margin-bottom:15px; }
+.light-mode #about p { color:#0f172a; }
 
 /* PROJECTS */
-.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; transition: 0.3s; text-align: center; }
-.card:hover { transform: scale(1.05); background: rgba(56,189,248,0.1); }
-.card img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
-.card h3 { margin: 10px 0; }
-.card a { color: #38bdf8; font-weight: bold; }
+.projects { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px; }
+.card { background:rgba(255,255,255,0.05); padding:20px; border-radius:15px; transition:0.3s; text-align:center; }
+.card:hover { transform:scale(1.05); background:rgba(56,189,248,0.1); }
+.card img { width:100%; border-radius:10px; margin-bottom:10px; }
+.card h3 { margin:10px 0; }
+.card a { color:#38bdf8; font-weight:bold; }
 
 /* SKILLS */
-.skills { max-width: 800px; margin: auto; }
-.skill-bar { margin: 15px 0; background: rgba(255,255,255,0.1); border-radius: 25px; overflow: hidden; }
-.skill-bar span { display: block; height: 25px; width: 0; background: #38bdf8; text-align: right; padding-right: 10px; line-height: 25px; color: black; font-weight: bold; border-radius: 25px; transition: width 2s; }
+.skills { max-width:900px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:15px; }
+.skill-bar { display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.1); border-radius:25px; overflow:hidden; padding:5px 10px; }
+.skill-bar img { width:35px; height:35px; border-radius:5px; }
+.skill-bar span { display:block; height:25px; width:0; background:#38bdf8; text-align:right; padding-right:10px; line-height:25px; color:black; font-weight:bold; border-radius:25px; transition: width 2s; }
 
 /* SERVICES */
-.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.service-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; transition: 0.3s; }
-.service-card:hover { transform: translateY(-5px); background: rgba(56,189,248,0.1); }
-.service-card h3 { color: #38bdf8; margin-bottom: 10px; }
+.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+.service-card { background:rgba(255,255,255,0.05); padding:20px; border-radius:15px; transition:0.3s; }
+.service-card:hover { transform:translateY(-5px); background:rgba(56,189,248,0.1); }
+.service-card h3 { color:#38bdf8; margin-bottom:10px; }
 
 /* CONTACT */
-.contact-info { text-align: center; line-height: 1.8; }
+.contact-info { text-align:center; line-height:1.8; display:flex; flex-direction:column; gap:10px; align-items:center; }
+.contact-icons { display:flex; gap:15px; margin-top:10px; }
+.contact-icons svg { width:40px; height:40px; fill:#38bdf8; transition:0.3s; cursor:pointer; border-radius:8px; padding:5px; background:rgba(255,255,255,0.05); }
+.contact-icons svg:hover { background:#38bdf8; fill:black; }
 
 /* FOOTER */
-footer { text-align: center; padding: 25px 10px; background: rgba(0,0,0,0.5); font-size: 0.9rem; }
-footer a { color: #38bdf8; margin: 0 5px; }
+footer { text-align:center; padding:25px 10px; background:rgba(0,0,0,0.5); font-size:0.9rem; }
+footer a { color:#38bdf8; margin:0 5px; }
 
-/* LIGHT/DARK TOGGLE BUTTON */
-#modeToggle {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #38bdf8;
-    color: black;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 200;
-}
+/* LIGHT/DARK TOGGLE */
+#modeToggle { position:fixed; bottom:30px; right:30px; background:#38bdf8; color:black; border:none; padding:12px 18px; border-radius:50px; cursor:pointer; font-weight:bold; z-index:200; }
+
+/* TYPING ANIMATION */
+.typing { border-right: .15em solid #38bdf8; white-space:nowrap; overflow:hidden; }
 </style>
 </head>
-
 <body>
 
 <!-- NAVBAR -->
@@ -124,51 +111,30 @@ footer a { color: #38bdf8; margin: 0 5px; }
 <!-- HERO -->
 <section class="hero" id="home" data-aos="fade-up">
     <h1>Hi, I'm <span>Yusuf Atanda</span></h1>
-    <p>Data Specialist (Scientist & Analytics) | Machine Learning Student | Product Packet & Graphic Designer | AI Prompt User & Engineer</p>
+    <p class="typing" id="typing"></p>
     <a href="#projects" class="btn">View My Work</a>
 </section>
 
 <!-- ABOUT -->
 <section id="about" data-aos="fade-up">
+    <img src="yusuf-image.png" alt="Yusuf Atanda">
     <h2>About Me</h2>
-    <p>I am a highly motivated Data Specialist with hands-on experience in data science and analytics, specializing in transforming complex datasets into actionable business insights. I have worked on diverse data-driven projects, including data cleaning, exploratory analysis, and dashboard development using tools such as SQL and Power BI.</p>
-    <p>My experience includes analyzing trends, building interactive visualizations, and supporting data-driven decision-making processes that improve operational efficiency. I have contributed to projects that involved structuring large datasets, identifying key performance indicators, and developing basic predictive models.</p>
-    <p>With a strong analytical mindset and attention to detail, I am passionate about leveraging data to solve real-world problems, optimize strategies, and drive business growth. I am continuously improving my technical skills and staying up to date with emerging trends in data science and analytics.</p>
+    <p>I am a highly motivated Data Specialist with hands-on experience in data science and analytics, transforming complex datasets into actionable insights. Skilled in SQL, Excel, Power BI, Python, and Dashboarding.</p>
+    <p>I analyze trends, build interactive visualizations, and support data-driven decision-making processes for better operational efficiency. I have worked on large datasets, identified KPIs, and developed basic predictive models.</p>
+    <p>Passionate about solving real-world problems using data, optimizing strategies, and driving business growth. Always improving my technical skills and staying updated with emerging trends in analytics and AI.</p>
+    <p>Connect with me on Facebook: <a href="https://www.facebook.com/profile.php?id=61562852330241" target="_blank">Facebook Profile</a></p>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects">
-        <div class="card">
-            <img src="sql-work.png" alt="SQL Work Sample">
-            <h3>SQL Work Sample</h3>
-            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
-        </div>
-        <div class="card">
-            <img src="powerbi-sales-dashboard.png" alt="Power BI Sales Dashboard">
-            <h3>Power BI Sales Dashboard</h3>
-            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
-        </div>
-        <div class="card">
-            <img src="health-dashboard.png" alt="Health Dashboard">
-            <h3>Health Dashboard</h3>
-            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
-        </div>
-        <div class="card">
-            <img src="excel-sample.png" alt="Excel Work Sample">
-            <h3>Excel Work Sample</h3>
-            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
-        </div>
-        <div class="card">
-            <img src="python-analytics.png" alt="Python Analytics Work Sample">
-            <h3>Python for Analytics</h3>
-            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
-        </div>
-        <div class="card">
-            <h3>Upcoming Project</h3>
-            <p>More data analytics projects coming soon.</p>
-        </div>
+        <div class="card"><img src="sql-work.png" alt="SQL Work Sample"><h3>SQL Work Sample</h3><a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a></div>
+        <div class="card"><img src="powerbi-sales-dashboard.png" alt="Power BI Sales Dashboard"><h3>Power BI Sales Dashboard</h3><a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a></div>
+        <div class="card"><img src="health-dashboard.png" alt="Health Dashboard"><h3>Health Dashboard</h3><a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a></div>
+        <div class="card"><img src="excel-sample.png" alt="Excel Work Sample"><h3>Excel Work Sample</h3><a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a></div>
+        <div class="card"><img src="python-analytics.png" alt="Python Analytics Work Sample"><h3>Python for Analytics</h3><a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a></div>
+        <div class="card"><h3>Upcoming Project</h3><p>More data analytics projects coming soon.</p></div>
     </div>
 </section>
 
@@ -176,13 +142,12 @@ footer a { color: #38bdf8; margin: 0 5px; }
 <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="skills">
-        <div class="skill-bar" data-skill="Excel" data-percent="90%"><span></span></div>
-        <div class="skill-bar" data-skill="SQL" data-percent="85%"><span></span></div>
-        <div class="skill-bar" data-skill="Power BI" data-percent="80%"><span></span></div>
-        <div class="skill-bar" data-skill="Python" data-percent="75%"><span></span></div>
-        <div class="skill-bar" data-skill="Data Cleaning" data-percent="90%"><span></span></div>
-        <div class="skill-bar" data-skill="Dashboarding" data-percent="85%"><span></span></div>
-        <div class="skill-bar" data-skill="Machine Learning" data-percent="70%"><span></span></div>
+        <div class="skill-bar" data-skill="Excel" data-percent="90%"><img src="excel-icon.png" alt=""><span></span></div>
+        <div class="skill-bar" data-skill="SQL" data-percent="85%"><img src="sql-icon.png" alt=""><span></span></div>
+        <div class="skill-bar" data-skill="Power BI" data-percent="80%"><img src="powerbi-icon.png" alt=""><span></span></div>
+        <div class="skill-bar" data-skill="Python" data-percent="75%"><img src="python-icon.png" alt=""><span></span></div>
+        <div class="skill-bar" data-skill="Data Cleaning" data-percent="90%"><img src="data-icon.png" alt=""><span></span></div>
+        <div class="skill-bar" data-skill="Machine Learning" data-percent="70%"><img src="ml-icon.png" alt=""><span></span></div>
     </div>
 </section>
 
@@ -190,22 +155,10 @@ footer a { color: #38bdf8; margin: 0 5px; }
 <section id="services" data-aos="fade-up">
     <h2>Services</h2>
     <div class="services">
-        <div class="service-card">
-            <h3>Data Analytics</h3>
-            <p>Transform raw data into actionable insights. Clean, analyze, and visualize datasets using Excel, SQL, and Power BI to support business decisions.</p>
-        </div>
-        <div class="service-card">
-            <h3>Data Science</h3>
-            <p>Develop predictive models, perform exploratory data analysis, and identify trends to drive data-driven decision-making.</p>
-        </div>
-        <div class="service-card">
-            <h3>Business Dashboarding</h3>
-            <p>Create interactive dashboards for tracking KPIs and performance metrics, helping organizations monitor operations effectively.</p>
-        </div>
-        <div class="service-card">
-            <h3>AI & ML Exploration</h3>
-            <p>Experiment with AI prompts, machine learning algorithms, and Python scripts to optimize data processes and predictive analytics.</p>
-        </div>
+        <div class="service-card"><h3>Data Analytics</h3><p>Transform raw data into actionable insights using SQL, Excel, Power BI, and Python. Visualize trends and KPIs for business optimization.</p></div>
+        <div class="service-card"><h3>Data Science</h3><p>Develop predictive models, perform exploratory analysis, and identify key patterns for informed decision-making.</p></div>
+        <div class="service-card"><h3>Dashboarding</h3><p>Create interactive dashboards for KPIs and operational tracking.</p></div>
+        <div class="service-card"><h3>AI & ML</h3><p>Explore AI prompt engineering, machine learning experiments, and Python automation for analytics tasks.</p></div>
     </div>
 </section>
 
@@ -215,11 +168,27 @@ footer a { color: #38bdf8; margin: 0 5px; }
     <div class="contact-info">
         <p>Email: <a href="mailto:yusufatanda707@gmail.com">yusufatanda707@gmail.com</a></p>
         <p>Phone: <a href="tel:09019112346">09019112346</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/atanda-yusuf-79b127365/" target="_blank">Atanda Yusuf</a></p>
+        <div class="contact-icons">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/atanda-yusuf-79b127365/" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.84v2.16h.05c.53-1 1.83-2.06 3.78-2.06 4.04 0 4.78 2.66 4.78 6.12V24h-4v-8.5c0-2.03-.04-4.63-2.82-4.63-2.83 0-3.27 2.22-3.27 4.5V24h-4V8z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61562852330241" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M22.675 0H1.326C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.326 24h11.497v-9.294H9.691v-3.622h3.132V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.098 2.795.142v3.24l-1.918.001c-1.504 0-1.795.716-1.795 1.764v2.313h3.588l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/></svg>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/yusufatanda707-commits" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.288-1.552 3.293-1.23 3.293-1.23.654 1.653.242 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.625-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:yusufatanda707@gmail.com">
+                <svg viewBox="0 0 24 24"><path d="M12 13.065L.75 4.5V19.5h22.5V4.5L12 13.065zM12 0L0 9l12 8.25L24 9 12 0z"/></svg>
+            </a>
+        </div>
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p>© 2026 YUSUF FAWAS ATANDA | Data Specialist (Scientist & Analytics) | Machine Learning Student</p>
 </footer>
@@ -230,30 +199,23 @@ footer a { color: #38bdf8; margin: 0 5px; }
 <!-- JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
+// Initialize scroll animations
 AOS.init();
 
-// Light/Dark Mode Toggle
-const toggle = document.getElementById('modeToggle');
-toggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    document.querySelector('nav').classList.toggle('light-mode');
-});
+// Light
 
-// Animate skill bars on scroll
-window.addEventListener('scroll', () => {
-    document.querySelectorAll('.skill-bar').forEach(bar => {
-        const rect = bar.getBoundingClientRect();
-        if(rect.top < window.innerHeight) {
-            bar.querySelector('span').style.width = bar.dataset.percent;
-            bar.querySelector('span').textContent = bar.dataset.skill + ' ' + bar.dataset.percent;
-        }
-    });
-});
-</script>
 
-</body>
-</html>
 
+
+
+
+
+
+   
+
+
+    
+       
 
  
  
