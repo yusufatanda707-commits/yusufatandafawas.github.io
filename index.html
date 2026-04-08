@@ -1,62 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf Atanda | Data Analyst</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #0f172a;
-            color: white;
-        }
-        header {
-            background: #1e293b;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        .project {
-            background: #1e293b;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-        a {
-            color: #38bdf8;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yusuf Atanda | Data Analyst</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero p {
+    color: #cbd5f5;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTION */
+section {
+    padding: 50px 20px;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(56,189,248,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card a {
+    color: #38bdf8;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #38bdf8;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Yusuf Atanda</h1>
-    <p>Data Analyst | Excel | SQL | Power BI</p>
-</header>
+<nav>
+    <h2>Yusuf</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-<section>
-    <h2>About Me</h2>
-    <p>I am a data analyst passionate about solving real-world problems using data.</p>
+<section class="hero" id="home">
+    <h1>Hi, I'm <span>Yusuf Atanda</span></h1>
+    <p>Data Analyst | Excel | SQL | Power BI</p>
+    <a href="#projects" class="btn">View My Work</a>
 </section>
 
-<section>
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a data analyst passionate about transforming raw data into meaningful insights.
+        I specialize in Excel dashboards, SQL queries, and Power BI visualization.
+        Currently seeking internship opportunities in Lagos.
+    </p>
+</section>
+
+<section id="projects">
     <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Health Data Analysis</h3>
-        <p>Analyzed patient data using Excel and dashboards.</p>
-        <a href="#">View Project</a>
-    </div>
+    <div class="projects">
 
+        <div class="card">
+            <img src="Health Data Analysis Screenshot.jpg" alt="project">
+            <h3>Health Data Analysis</h3>
+            <p>Analyzed patient data and built interactive dashboards using Excel.</p>
+            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Upcoming Project</h3>
+            <p>More data analytics projects coming soon.</p>
+        </div>
+
+    </div>
 </section>
 
-<section>
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Excel</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Data Cleaning</div>
+        <div class="skill">Dashboarding</div>
+    </div>
+</section>
+
+<section id="contact">
     <h2>Contact</h2>
     <p>Email: yusufatanda707@gmail.com</p>
+    <p>Phone: 09019112346</p>
 </section>
+
+<footer>
+    <p>© 2026 Yusuf Atanda | Data Analyst</p>
+</footer>
 
 </body>
 </html>
+       
+      
+
+
