@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YUSUF FAWAS ATANDA | Data Specialist</title>
+<title>YUSUF FAWAS ATANDA | Data Specialist & Analytics</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -14,13 +14,14 @@ body {
     background: linear-gradient(135deg, #0f172a, #1e3a8a);
     color: white;
     scroll-behavior: smooth;
-    line-height: 1.6;
+    transition: all 0.3s ease;
 }
 
 h1, h2, h3 { margin: 0; }
 
-a { color: #38bdf8; text-decoration: none; }
+a { text-decoration: none; transition: 0.3s; }
 
+/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
@@ -33,71 +34,82 @@ nav {
 
 nav h2 { color: #38bdf8; }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
+nav ul { display: flex; list-style: none; }
 
-nav ul li { margin-left: 20px; }
+nav ul li { margin-left: 25px; }
 
 nav a { color: white; }
 
 nav a:hover { color: #38bdf8; }
 
+/* HERO */
 .hero {
     text-align: center;
-    padding: 90px 20px;
+    padding: 80px 20px;
 }
 
 .hero h1 { font-size: 3rem; }
 
 .hero span { color: #38bdf8; }
 
-.hero p {
-    max-width: 800px;
-    margin: 10px auto;
-    color: #cbd5f5;
-    font-size: 1.1rem;
-}
+.hero p { color: #cbd5f5; margin-top: 10px; }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
     background: linear-gradient(90deg, #38bdf8, #60a5fa);
     color: black;
-    font-weight: bold;
     border-radius: 8px;
+    font-weight: bold;
 }
 
+/* SECTIONS */
 section {
     padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
 }
 
-.projects, .services {
+/* ABOUT */
+#about p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.8;
+    color: inherit;
+}
+
+/* PROJECTS */
+.projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
-.card, .service-card {
+.card {
     background: rgba(255,255,255,0.05);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 15px;
     transition: 0.3s;
+    text-align: center;
 }
 
-.card:hover, .service-card:hover {
-    transform: scale(1.03);
+.card:hover {
+    transform: scale(1.05);
     background: rgba(56,189,248,0.1);
 }
 
-.card img { width: 100%; border-radius: 10px; }
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
 
+/* SKILLS */
 .skills .skill {
-    margin-bottom: 20px;
+    background: rgba(56,189,248,0.2);
+    padding: 15px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 10px auto;
 }
 
 .progress-bar {
@@ -113,21 +125,76 @@ section {
     background: #38bdf8;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.5);
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
+.service-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background: rgba(56,189,248,0.1);
+}
+
+/* CONTACT */
+.contact-info {
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    background: rgba(0,0,0,0.5);
+    font-size: 0.9rem;
+}
+
+/* LIGHT THEME FIXED (IMPORTANT FIX HERE) */
+body.light-theme {
+    background: #f0f4f8;
+    color: #0f172a;
+}
+
+body.light-theme nav {
+    background: rgba(255,255,255,0.8);
+}
+
+body.light-theme nav a {
+    color: #0f172a;
+}
+
+body.light-theme .card,
+body.light-theme .service-card,
+body.light-theme .skills .skill {
+    background: rgba(30,58,138,0.1);
+    color: #0f172a;
+}
+
+body.light-theme .hero p,
+body.light-theme #about p,
+body.light-theme .contact-info {
+    color: #0f172a;
+}
+
+/* TOGGLE */
 #theme-toggle {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 10px 15px;
-    border: none;
     background: #38bdf8;
-    cursor: pointer;
+    color: black;
+    border: none;
+    padding: 10px 15px;
     border-radius: 8px;
+    cursor: pointer;
 }
 </style>
 </head>
@@ -150,136 +217,100 @@ footer {
 <!-- HERO -->
 <section class="hero" id="home">
     <h1>Hi, I'm <span>Yusuf Atanda</span></h1>
-    <p>
-        Data Specialist | Data Analytics | Machine Learning Student | Product & Graphic Designer | AI Prompt Engineer
-    </p>
+    <p>Data Specialist | Analytics & Machine Learning | Product & Graphic Designer | AI Prompt Engineer</p>
     <a href="#projects" class="btn">View My Work</a>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<h2>About Me</h2>
-
-<p>
-I am Yusuf Atanda, a Data Specialist with a strong passion for transforming raw data into meaningful insights that support smarter decision-making.
-</p>
-
-<p>
-I specialize in data cleaning, analysis, and visualization using Python, SQL, Excel, and Power BI. I have experience building dashboards, analyzing datasets, and creating reports that help businesses and organizations understand performance and trends.
-</p>
-
-<p>
-I focus on understanding the story behind data and using it to solve real-world problems. I believe data is a powerful tool that can improve decision-making in business, healthcare, and technology.
-</p>
-
-<p>
-I am continuously building real-world projects and improving my skills in data analytics and machine learning. My goal is to become a highly skilled data professional capable of delivering impactful insights.
-</p>
-
-<p>
-I am currently open to internship opportunities where I can contribute, learn, and gain real-world experience in data analytics and business intelligence.
-</p>
+    <h2>About Me</h2>
+    <p>I am a highly motivated Data Specialist with hands-on experience in data science and analytics, transforming complex datasets into actionable business insights.</p>
+    <p>I have worked on projects involving data cleaning, exploratory analysis, and dashboard development using SQL, Python, and Power BI.</p>
+    <p>I focus on solving real-world problems using data and improving decision-making across industries like business, healthcare, and technology.</p>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-<h2>Projects</h2>
+    <h2>Projects</h2>
+    <div class="projects">
 
-<div class="projects">
+        <div class="card">
+            <img src="sql-work.png">
+            <h3>SQL Work Sample</h3>
+            <a href="#">View Project</a>
+        </div>
 
-<div class="card">
-<img src="sql-work.png">
-<h3>SQL Data Analysis</h3>
-<p>Analyzed datasets to extract insights and business trends.</p>
-</div>
+        <div class="card">
+            <img src="powerbi-sales-dashboard.png">
+            <h3>Power BI Dashboard</h3>
+            <a href="#">View Project</a>
+        </div>
 
-<div class="card">
-<img src="powerbi-sales-dashboard.png">
-<h3>Power BI Dashboard</h3>
-<p>Built interactive dashboard for sales tracking and insights.</p>
-</div>
-
-<div class="card">
-<h3>Excel Analysis</h3>
-<p>Cleaned and analyzed data for better decision-making.</p>
-</div>
-
-<div class="card">
-<h3>Python Analytics</h3>
-<p>Performed exploratory data analysis using Python.</p>
-</div>
-
-</div>
+    </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-<h2>Skills</h2>
+    <h2>Skills</h2>
 
-<div class="skill">
-<h3>Python</h3>
-<div class="progress-bar"><div class="progress" style="width:80%"></div></div>
-</div>
+    <div class="skills">
+        <div class="skill">
+            <h3>Python</h3>
+            <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
+        </div>
 
-<div class="skill">
-<h3>SQL</h3>
-<div class="progress-bar"><div class="progress" style="width:75%"></div></div>
-</div>
+        <div class="skill">
+            <h3>SQL</h3>
+            <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
+        </div>
 
-<div class="skill">
-<h3>Excel</h3>
-<div class="progress-bar"><div class="progress" style="width:85%"></div></div>
-</div>
+        <div class="skill">
+            <h3>Excel</h3>
+            <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
+        </div>
 
-<div class="skill">
-<h3>Power BI</h3>
-<div class="progress-bar"><div class="progress" style="width:70%"></div></div>
-</div>
-
+        <div class="skill">
+            <h3>Power BI</h3>
+            <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+        </div>
+    </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-<h2>Services</h2>
+    <h2>Services</h2>
 
-<div class="services">
+    <div class="services">
+        <div class="service-card">
+            <h3>Data Analysis</h3>
+            <p>Transform raw data into insights.</p>
+        </div>
 
-<div class="service-card">
-<h3>Data Analysis</h3>
-<p>Transform raw data into actionable business insights.</p>
-</div>
-
-<div class="service-card">
-<h3>Dashboard Creation</h3>
-<p>Build dashboards for tracking performance and KPIs.</p>
-</div>
-
-<div class="service-card">
-<h3>Business Insights</h3>
-<p>Help organizations make smarter data-driven decisions.</p>
-</div>
-
-</div>
+        <div class="service-card">
+            <h3>Dashboard Creation</h3>
+            <p>Build dashboards for businesses.</p>
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Contact Me</h2>
+    <h2>Contact</h2>
 
-<p>If you are looking for a data specialist to help with analysis, dashboards, or insights, feel free to reach out.</p>
-
-<p>Email: <a href="mailto:yusufatanda707@gmail.com">yusufatanda707@gmail.com</a></p>
-<p>Phone: <a href="tel:09019112346">09019112346</a></p>
-<p>LinkedIn: Yusuf Atanda</p>
-<p>Twitter (X): <a href="https://x.com/AtandaYusu85400" target="_blank">Follow Me</a></p>
+    <div class="contact-info">
+        <p>Email: yusufatanda707@gmail.com</p>
+        <p>Phone: 09019112346</p>
+        <p>LinkedIn: Yusuf Atanda</p>
+        <p>Twitter (X): <a href="https://x.com/AtandaYusu85400" target="_blank">Follow Me</a></p>
+    </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-© 2026 Yusuf Atanda | Data Specialist | Machine Learning Student
+    © 2026 Yusuf Atanda | Data Specialist | Machine Learning Student
 </footer>
 
-<!-- THEME BUTTON -->
+<!-- TOGGLE -->
 <button id="theme-toggle">Toggle Theme</button>
 
 <script>
