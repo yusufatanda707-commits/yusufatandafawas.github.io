@@ -21,7 +21,7 @@ h1, h2, h3 { margin: 0; }
 
 a { text-decoration: none; transition: 0.3s; }
 
-/* NAV */
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
@@ -30,11 +30,16 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: all 0.3s ease;
 }
 
 nav h2 { color: #38bdf8; }
 
-nav ul { display: flex; list-style: none; }
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
 
 nav ul li { margin-left: 25px; }
 
@@ -46,15 +51,22 @@ nav a:hover { color: #38bdf8; }
 .hero {
     text-align: center;
     padding: 80px 20px;
+    color: white;
 }
 
 .hero h1 { font-size: 3rem; }
 
 .hero span { color: #38bdf8; }
 
-.hero p { color: #cbd5f5; margin-top: 10px; }
+.hero p { color: #cbd5f5; font-weight: 500; margin-top: 10px; }
 
-/* BUTTON */
+/* FIX: ensure visibility */
+.hero h1, .hero p {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* BUTTONS */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -63,7 +75,10 @@ nav a:hover { color: #38bdf8; }
     color: black;
     border-radius: 8px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
+
+.btn:hover { transform: scale(1.05); }
 
 /* SECTIONS */
 section {
@@ -71,11 +86,17 @@ section {
 }
 
 /* ABOUT */
+#about {
+    color: #e0e7ff;
+}
+
+/* FIX: make sure text is visible in all themes */
 #about p {
     max-width: 800px;
     margin: 15px auto;
     line-height: 1.8;
     color: inherit;
+    opacity: 1;
 }
 
 /* PROJECTS */
@@ -91,6 +112,7 @@ section {
     border-radius: 15px;
     transition: 0.3s;
     text-align: center;
+    color: inherit;
 }
 
 .card:hover {
@@ -101,28 +123,32 @@ section {
 .card img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 /* SKILLS */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 .skills .skill {
     background: rgba(56,189,248,0.2);
     padding: 15px;
     border-radius: 12px;
+    width: 100%;
     max-width: 600px;
     margin: 10px auto;
+    transition: 0.3s;
+    color: inherit;
 }
 
-.progress-bar {
-    width: 100%;
-    height: 8px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: #38bdf8;
+.skills .skill:hover {
+    transform: scale(1.03);
+    background: rgba(56,189,248,0.3);
 }
 
 /* SERVICES */
@@ -136,6 +162,7 @@ section {
     background: rgba(255,255,255,0.05);
     padding: 20px;
     border-radius: 15px;
+    transition: 0.3s;
 }
 
 .service-card:hover {
@@ -157,7 +184,21 @@ footer {
     font-size: 0.9rem;
 }
 
-/* LIGHT THEME FIXED (IMPORTANT FIX HERE) */
+/* THEME TOGGLE */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #38bdf8;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* LIGHT THEME FIX */
 body.light-theme {
     background: #f0f4f8;
     color: #0f172a;
@@ -179,29 +220,14 @@ body.light-theme .skills .skill {
 }
 
 body.light-theme .hero p,
-body.light-theme #about p,
-body.light-theme .contact-info {
+body.light-theme #about p {
     color: #0f172a;
-}
-
-/* TOGGLE */
-#theme-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #38bdf8;
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
     <h2>Yusuf Atanda</h2>
     <ul>
@@ -224,54 +250,29 @@ body.light-theme .contact-info {
 <!-- ABOUT -->
 <section id="about">
     <h2>About Me</h2>
-    <p>I am a highly motivated Data Specialist with hands-on experience in data science and analytics, transforming complex datasets into actionable business insights.</p>
-    <p>I have worked on projects involving data cleaning, exploratory analysis, and dashboard development using SQL, Python, and Power BI.</p>
-    <p>I focus on solving real-world problems using data and improving decision-making across industries like business, healthcare, and technology.</p>
+    <p>I am a highly motivated Data Specialist with hands-on experience in data science and analytics, transforming complex datasets into actionable business insights. I have worked on projects involving data cleaning, exploratory analysis, and dashboard development using SQL, Python, and Power BI.</p>
+    <p>My experience includes analyzing trends, building interactive visualizations, and supporting data-driven decision-making processes to improve operational efficiency across business, healthcare, and technology sectors.</p>
+    <p>With a strong analytical mindset, I leverage data to solve real-world problems, optimize strategies, and drive growth. I continuously improve my technical skills and stay up-to-date with emerging trends in data science and analytics.</p>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
-
         <div class="card">
-            <img src="sql-work.png">
+            <img src="sql-work.png" alt="SQL Work Sample">
             <h3>SQL Work Sample</h3>
-            <a href="#">View Project</a>
+            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
         </div>
-
-        <div class="card">
-            <img src="powerbi-sales-dashboard.png">
-            <h3>Power BI Dashboard</h3>
-            <a href="#">View Project</a>
-        </div>
-
     </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-    <h2>Skills</h2>
-
+    <h2>Data Analytics Skills & Impact</h2>
     <div class="skills">
         <div class="skill">
-            <h3>Python</h3>
-            <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
-        </div>
-
-        <div class="skill">
-            <h3>SQL</h3>
-            <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
-        </div>
-
-        <div class="skill">
-            <h3>Excel</h3>
-            <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
-        </div>
-
-        <div class="skill">
-            <h3>Power BI</h3>
-            <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+            <h3>Python & Machine Learning Basics</h3>
         </div>
     </div>
 </section>
@@ -279,38 +280,24 @@ body.light-theme .contact-info {
 <!-- SERVICES -->
 <section id="services">
     <h2>Services</h2>
-
-    <div class="services">
-        <div class="service-card">
-            <h3>Data Analysis</h3>
-            <p>Transform raw data into insights.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Dashboard Creation</h3>
-            <p>Build dashboards for businesses.</p>
-        </div>
-    </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
-
     <div class="contact-info">
-        <p>Email: yusufatanda707@gmail.com</p>
+        <p>Email: <a href="mailto:yusufatanda707@gmail.com">yusufatanda707@gmail.com</a></p>
         <p>Phone: 09019112346</p>
         <p>LinkedIn: Yusuf Atanda</p>
+        <p>Facebook: Yusuf Atanda</p>
         <p>Twitter (X): <a href="https://x.com/AtandaYusu85400" target="_blank">Follow Me</a></p>
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    © 2026 Yusuf Atanda | Data Specialist | Machine Learning Student
+© 2026 Yusuf Atanda | Data Specialist & Analytics | Machine Learning Student
 </footer>
 
-<!-- TOGGLE -->
 <button id="theme-toggle">Toggle Theme</button>
 
 <script>
@@ -321,7 +308,6 @@ document.getElementById("theme-toggle").onclick = function () {
 
 </body>
 </html>
-    
        
 
  
