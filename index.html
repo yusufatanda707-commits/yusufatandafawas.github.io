@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-
 /* GLOBAL STYLES */
 body {
     margin: 0;
@@ -19,13 +18,8 @@ body {
     scroll-behavior: smooth;
     transition: all 0.3s ease;
 }
-
 h1, h2, h3 { margin: 0; }
-
-a {
-    text-decoration: none;
-    transition: 0.3s;
-}
+a { text-decoration: none; transition: 0.3s; }
 
 /* NAVBAR */
 nav {
@@ -38,19 +32,10 @@ nav {
     z-index: 100;
     transition: all 0.3s ease;
 }
-
 nav h2 { color: #38bdf8; }
-
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-}
-
+nav ul { display: flex; list-style: none; margin: 0; }
 nav ul li { margin-left: 25px; }
-
 nav a { color: white; }
-
 nav a:hover { color: #38bdf8; }
 
 /* HERO */
@@ -59,16 +44,9 @@ nav a:hover { color: #38bdf8; }
     padding: 80px 20px;
     color: white;
 }
-
 .hero h1 { font-size: 3rem; }
-
 .hero span { color: #38bdf8; }
-
-.hero p {
-    color: #cbd5f5;
-    font-weight: 500;
-    margin-top: 10px;
-}
+.hero p { color: #cbd5f5; font-weight: 500; margin-top: 10px; }
 
 /* BUTTONS */
 .btn {
@@ -81,25 +59,14 @@ nav a:hover { color: #38bdf8; }
     font-weight: bold;
     transition: all 0.3s ease;
 }
-
 .btn:hover { transform: scale(1.05); }
 
 /* SECTIONS */
-section {
-    padding: 60px 20px;
-}
+section { padding: 60px 20px; }
 
 /* ABOUT */
-#about {
-    color: #e0e7ff;
-}
-
-#about p {
-    max-width: 800px;
-    margin: 15px auto;
-    line-height: 1.8;
-    color: inherit;
-}
+#about { color: #e0e7ff; }
+#about p { max-width: 800px; margin: 15px auto; line-height: 1.8; color: inherit; }
 
 /* PROJECTS */
 .projects {
@@ -107,7 +74,6 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-
 .card {
     background: rgba(255,255,255,0.05);
     padding: 20px;
@@ -116,24 +82,10 @@ section {
     text-align: center;
     color: inherit;
 }
-
-.card:hover {
-    transform: scale(1.05);
-    background: rgba(56,189,248,0.1);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
+.card:hover { transform: scale(1.05); background: rgba(56,189,248,0.1); }
+.card img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
 .card h3 { margin: 10px 0; }
-
-.card a {
-    color: #38bdf8;
-    font-weight: bold;
-}
+.card a { color: #38bdf8; font-weight: bold; }
 
 /* SKILLS */
 .skills {
@@ -143,7 +95,6 @@ section {
     justify-content: center;
     align-items: center;
 }
-
 .skills .skill {
     background: rgba(56,189,248,0.2);
     padding: 15px;
@@ -154,22 +105,9 @@ section {
     transition: 0.3s;
     color: inherit;
 }
-
-.skills .skill:hover {
-    transform: scale(1.03);
-    background: rgba(56,189,248,0.3);
-}
-
-.skills .skill h3 {
-    margin-bottom: 5px;
-    color: #38bdf8;
-}
-
-.skills .skill p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: inherit;
-}
+.skills .skill:hover { transform: scale(1.03); background: rgba(56,189,248,0.3); }
+.skills .skill h3 { margin-bottom: 5px; color: #38bdf8; }
+.skills .skill p { font-size: 0.95rem; line-height: 1.5; color: inherit; }
 
 /* SERVICES */
 .services {
@@ -177,7 +115,6 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-
 .service-card {
     background: rgba(255,255,255,0.05);
     padding: 20px;
@@ -185,77 +122,31 @@ section {
     transition: 0.3s;
     color: inherit;
 }
-
-.service-card:hover {
-    transform: translateY(-5px);
-    background: rgba(56,189,248,0.1);
-}
-
-.service-card h3 {
-    color: #38bdf8;
-    margin-bottom: 10px;
-}
+.service-card:hover { transform: translateY(-5px); background: rgba(56,189,248,0.1); }
+.service-card h3 { color: #38bdf8; margin-bottom: 10px; }
 
 /* CONTACT */
-.contact-info {
-    text-align: center;
-    line-height: 1.8;
-    color: inherit;
-}
+.contact-info { text-align: center; line-height: 1.8; color: inherit; }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 25px 10px;
-    background: rgba(0,0,0,0.5);
-    font-size: 0.9rem;
-    color: inherit;
-}
-
-footer a {
-    color: #38bdf8;
-    margin: 0 5px;
-}
+footer { text-align: center; padding: 25px 10px; background: rgba(0,0,0,0.5); font-size: 0.9rem; color: inherit; }
+footer a { color: #38bdf8; margin: 0 5px; }
 
 /* DARK/LIGHT THEME */
 body.light-theme {
     background: #f0f4f8;
     color: #0f172a;
 }
-
-body.light-theme nav {
-    background: rgba(255,255,255,0.8);
-}
-
-body.light-theme nav a {
-    color: #0f172a;
-}
-
-body.light-theme nav a:hover {
-    color: #1e3a8a;
-}
-
+body.light-theme nav { background: rgba(255,255,255,0.8); }
+body.light-theme nav a { color: #0f172a; }
+body.light-theme nav a:hover { color: #1e3a8a; }
 body.light-theme .card,
-body.light-theme .service-card {
-    background: rgba(30,58,138,0.1);
-    color: #0f172a;
-}
-
-body.light-theme .btn {
-    background: #1e3a8a;
-    color: white;
-}
-
+body.light-theme .service-card { background: rgba(30,58,138,0.1); color: #0f172a; }
+body.light-theme .btn { background: #1e3a8a; color: white; }
 body.light-theme .skills .skill p,
 body.light-theme #about p,
-body.light-theme .hero p {
-    color: #0f172a;
-}
-
-body.light-theme footer {
-    background: rgba(255,255,255,0.5);
-    color: #0f172a;
-}
+body.light-theme .hero p { color: #0f172a; }
+body.light-theme footer { background: rgba(255,255,255,0.5); color: #0f172a; }
 
 /* THEME TOGGLE BUTTON */
 #theme-toggle {
@@ -272,9 +163,7 @@ body.light-theme footer {
     z-index: 1000;
     transition: 0.3s;
 }
-
 #theme-toggle:hover { transform: scale(1.1); }
-
 </style>
 </head>
 
@@ -303,35 +192,78 @@ body.light-theme footer {
 <!-- ABOUT -->
 <section id="about">
     <h2>About Me</h2>
-
     <p>I am a highly motivated Data Specialist with hands-on experience in data science and analytics, transforming complex datasets into actionable business insights. I have worked on projects involving data cleaning, exploratory analysis, and dashboard development using SQL, Python, and Power BI.</p>
-
     <p>My experience includes analyzing trends, building interactive visualizations, and supporting data-driven decision-making processes to improve operational efficiency across business, healthcare, and technology sectors.</p>
-
     <p>With a strong analytical mindset, I leverage data to solve real-world problems, optimize strategies, and drive growth. I continuously improve my technical skills and stay up-to-date with emerging trends in data science and analytics.</p>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
-
     <div class="projects">
         <div class="card">
-            <img src="sql-work.png">
+            <img src="sql-work.png" alt="SQL Work Sample">
             <h3>SQL Work Sample</h3>
-            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io">View Project</a>
+            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
+        </div>
+        <div class="card">
+            <img src="powerbi-sales-dashboard.png" alt="Power BI Sales Dashboard">
+            <h3>Power BI Sales Dashboard</h3>
+            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
+        </div>
+        <div class="card">
+            <img src="health-dashboard.png" alt="Health Dashboard">
+            <h3>Health Dashboard</h3>
+            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
+        </div>
+        <div class="card">
+            <img src="excel-sample.png" alt="Excel Work Sample">
+            <h3>Excel Work Sample</h3>
+            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
+        </div>
+        <div class="card">
+            <img src="python-analytics.png" alt="Python Analytics Work Sample">
+            <h3>Python for Analytics</h3>
+            <a href="https://github.com/yusufatanda707-commits/yusufatandafawas.github.io" target="_blank">View Project</a>
+        </div>
+        <div class="card">
+            <h3>Upcoming Project</h3>
+            <p>More data analytics projects coming soon.</p>
         </div>
     </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-    <h2>Skills</h2>
-
+    <h2>Data Analytics Skills & Impact</h2>
     <div class="skills">
         <div class="skill">
-            <h3>Python</h3>
-            <p>Data analysis, automation, machine learning basics.</p>
+            <h3>Excel & Data Cleaning</h3>
+            <p>Organize, clean, and prepare data efficiently. Helps businesses reduce errors, save time, and improve decision-making.</p>
+        </div>
+        <div class="skill">
+            <h3>SQL & Database Management</h3>
+            <p>Query and manage large datasets. Enables organizations to track KPIs, understand trends, and optimize operations.</p>
+        </div>
+        <div class="skill">
+            <h3>Power BI & Dashboarding</h3>
+            <p>Visualize data through interactive dashboards. Allows companies and healthcare organizations to monitor performance in real-time.</p>
+        </div>
+        <div class="skill">
+            <h3>Python & Machine Learning Basics</h3>
+            <p>Analyze complex datasets and develop predictive models. Helps anticipate trends, optimize processes, and improve customer experience.</p>
+        </div>
+        <div class="skill">
+            <h3>Data Visualization & Insights</h3>
+            <p>Communicate insights effectively. Supports healthcare decisions, business strategy, and operational improvements across organizations.</p>
+        </div>
+        <div class="skill">
+            <h3>AI Prompt Engineering & Automation</h3>
+            <p>Leverage AI to automate tasks, generate reports, and assist decision-making, boosting productivity and innovation.</p>
+        </div>
+        <div class="skill">
+            <h3>Business Analytics & Strategy</h3>
+            <p>Translate data into actionable strategies. Helps companies optimize marketing, reduce costs, and improve product development.</p>
         </div>
     </div>
 </section>
@@ -339,40 +271,59 @@ body.light-theme footer {
 <!-- SERVICES -->
 <section id="services">
     <h2>Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>Data Analytics</h3>
+            <p>Transform raw data into actionable insights. Clean, analyze, and visualize datasets using Excel, SQL, and Power BI to support business decisions.</p>
+        </div>
+        <div class="service-card">
+            <h3>Data Science</h3>
+            <p>Develop predictive models, perform exploratory data analysis, and identify trends to drive data-driven decision-making.</p>
+        </div>
+        <div class="service-card">
+            <h3>Business Dashboarding</h3>
+            <p>Create interactive dashboards for tracking KPIs and performance metrics, helping organizations monitor operations effectively.</p>
+        </div>
+        <div class="service-card">
+            <h3>AI & ML Exploration</h3>
+            <p>Experiment with AI prompts, machine learning algorithms, and Python scripts to optimize data processes and predictive analytics.</p>
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
-
     <div class="contact-info">
         <p>Email: <a href="mailto:yusufatanda707@gmail.com">yusufatanda707@gmail.com</a></p>
         <p>Phone: <a href="tel:09019112346">09019112346</a></p>
-        <p>LinkedIn: Yusuf Atanda</p>
-        <p>Facebook: Yusuf Atanda</p>
-
-        <!-- ADDED -->
-        <p>Twitter (X): <a href="https://x.com/AtandaYusu85400" target="_blank">My Twitter</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/atanda-yusuf-79b127365/" target="_blank">Atanda Yusuf</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61562852330241" target="_blank">Yusuf Atanda</a></p>
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    © 2026 Yusuf Fawas Atanda | Data Specialist & Analytics | Machine Learning Student
+    <p>© 2026 YUSUF FAWAS ATANDA | Data Specialist & Analytics | Machine Learning Student</p>
 </footer>
 
-<!-- TOGGLE -->
+<!-- THEME BUTTON + SCRIPT -->
 <button id="theme-toggle">Toggle Theme</button>
 
 <script>
-document.getElementById('theme-toggle').onclick = function () {
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-theme');
-};
+    localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+});
+
+if(localStorage.getItem('theme') === 'light'){
+    document.body.classList.add('light-theme');
+}
 </script>
 
 </body>
 </html>
-
  
  
     
